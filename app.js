@@ -60,7 +60,7 @@ app.use(ajaxserver);
     
       
    //Server setup//   
-  app.listen(3000, () => {
+  app.listen( process.env.PORT, () => {
       console.log("The HasQuoted Server Has Started!");
 });
 
