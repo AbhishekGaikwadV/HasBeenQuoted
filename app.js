@@ -54,14 +54,10 @@ app.use(usersession);
 app.use(ajaxserver);
 
 
- 
 
-    
-    
-      
-   //Server setup//   
-  app.listen( process.env.PORT, () => {
-      console.log("The HasQuoted Server Has Started!");
+ //Server setup//   
+ app.listen( process.env.PORT, () => {
+ console.log("The HasQuoted Server Has Started!");
 });
 
 
