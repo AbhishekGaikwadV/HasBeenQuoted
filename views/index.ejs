@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+<script >
+    
+    //Timer for the index page
+     setInterval(() => {
+     window.location.reload(true);
+     },20000);
+ </script>
+ 
+
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div class="container ">
+            <h1 class="title" >Has Been "Quoted"</h1>
+            <p class="lead">Login to get acces to all quotes.</p>
+        <div>    
+    </div>
+  
+      
+
+                <div id="title">Quote for this moment is</div>
+                   <div class="box middle center" id="card-index"> 
+            
+                        <div id= 'quoteandauthor'>                    
+                            <article id="quote"> " <%= quote %> "<br>
+                            <span id="author"> --- <%= author %> </span>              
+                            </article> 
+                        </div>
+                    </div>
+                </div>  
+       
+       
+
+
+ <%- include("partials/footer") -%>
