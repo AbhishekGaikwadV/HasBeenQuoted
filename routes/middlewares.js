@@ -17,6 +17,7 @@ middlewareObj.isLoggedIn = function (req, res, next){
  //Pagination middleware(Special Thanks to Web Dev simplified)   
     middlewareObj.paginatedData = function(model){
         return async (req, res, next) => {
+          try {
           const page = parseInt(req.query.page);
           const limit = parseInt(req.query.limit);
           const startIndex = (page - 1) * limit;
@@ -36,7 +37,7 @@ middlewareObj.isLoggedIn = function (req, res, next){
               }
             } 
       
-          try {
+          
       
             results.results = await model.find().limit(limit).skip(startIndex).exec();
             res.paginatedResults = results;
