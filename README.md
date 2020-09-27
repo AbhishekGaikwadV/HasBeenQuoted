@@ -1,3 +1,3 @@
 # HasBeenQuoted
 
-A website that offers large range of quotes for everyone.
+A website that offers huge amount of quotes for everyone.
