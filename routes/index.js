@@ -7,7 +7,7 @@ const express               = require("express"),
       
 
   //Home Route//
-  router.get( "/home", function(req, res){ 
+  router.get( "/", function(req, res){ 
     const que = Math.round(Math.random() * 1601);
     // console.log(que);
     Quote.findOne({num:que}, (err, quotes) => {
