@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+
+<% for(i= 0; i < 5; i++) { %> 
+    <div class="box middle center" id="cards" >   
+            <div  id= 'quoteandauthor'>           
+            
+            <p> --- <%= author[i].author %> </p>              
+           
+            </div> 
+    </div>
+<% } %>
+
+<%- include("partials/footer") -%>

@@ -7,7 +7,7 @@ const express               = require("express"),
 
 //Ajax for pagination on Show Route//
 router.get('/ajax',middleware.paginatedData(Quote), (req, res) =>{
-    console.log(res.paginatedResults);
+    // console.log(res.paginatedResults);
     res.json(res.paginatedResults);
     
 });

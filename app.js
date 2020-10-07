@@ -11,7 +11,8 @@ const express               = require("express"),
       index                 = require("./routes/index"),
       usersession           = require("./routes/usersession"),
       ajaxserver            = require("./routes/ajaxserver"),
-      middlewares           = require("./routes/middlewares")
+      middlewares           = require("./routes/middlewares"),
+      path                  = require("path")
 
           
       
@@ -56,7 +57,7 @@ app.use(ajaxserver);
 
 
  //Server setup//   
- app.listen( process.env.PORT, () => {
+ app.listen( process.env.PORT || 3000, () => {
  console.log("The HasQuoted Server Has Started!");
 });
 
