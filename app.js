@@ -24,7 +24,14 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);  
       
 //Database connection      
-mongoose.connect("mongodb+srv://HBQAdmin:12345@cluster0.xgorc.mongodb.net/quotesv1?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://HBQAdmin:12345@cluster0.xgorc.mongodb.net/quotesv1?retryWrites=true&w=majority",{
+	useNewUrlParser: true,
+	useCreateIndex: true
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('ERROR:', err.message);
+});
 
 //Passport Configutation
 app.use(require("express-session")({
