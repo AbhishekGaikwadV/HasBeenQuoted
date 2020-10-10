@@ -24,7 +24,7 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);  
       
 //Database connection      
-mongoose.connect("mongodb://localhost/quotes1");
+mongoose.connect("mongodb+srv://HBQAdmin:12345@cluster0.xgorc.mongodb.net/quotesv1?retryWrites=true&w=majority");
 
 //Passport Configutation
 app.use(require("express-session")({
