@@ -24,7 +24,7 @@
                 page = document.getElementById('button-next').value;
                          }
               
-               var url =`http://localhost:3000/ajax?page=${page}&limit=5`; 
+               var url =`https://hasbeenquoted.herokuapp.com/ajax?page=${page}&limit=5`; 
                
                xhr.open('GET', url, true);
               
@@ -108,7 +108,7 @@
                         }   
                                    
                         
-               var url =`http://localhost:3000/ajax?page=${page}&limit=5`;   
+               var url =`https://hasbeenquoted.herokuapp.com/ajax?page=${page}&limit=5`;   
                
                xhr.open('GET', url, true);
               
