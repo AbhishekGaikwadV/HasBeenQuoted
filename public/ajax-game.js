@@ -6,7 +6,7 @@ window.onload= function(){
         // Create XHR Object
         var xhr = new XMLHttpRequest();
         // OPEN - type, url/file, async
-        xhr.open('GET', 'http://localhost:3000/microapp', true);
+        xhr.open('GET', 'https://hasbeenquoted.herokuapp.com/microapp', true);
 
         console.log('READYSTATE: ', xhr.readyState);
 
