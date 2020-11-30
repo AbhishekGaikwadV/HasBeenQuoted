@@ -12,7 +12,8 @@ const express               = require("express"),
       usersession           = require("./routes/usersession"),
       ajaxserver            = require("./routes/ajaxserver"),
       middlewares           = require("./routes/middlewares"),
-      path                  = require("path")
+      path                  = require("path"),
+      cors                  = require('cors')
 
           
       
@@ -50,6 +51,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+
 //User variable middleware//
 app.use(function(req, res, next){
     res.locals.currentuser = req.user;
@@ -61,8 +63,15 @@ app.use(index);
 app.use(usersession);
 app.use(ajaxserver);
 
+//CORS Header 
+app.use(function(req,res,next){
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Headers","Origin, X-Request-With,Content-Type,Accept");
+    next();
+});
 
 
+  
  //Server setup//   
  app.listen( process.env.PORT || 3000, () => {
  console.log("The HasQuoted Server Has Started!");

@@ -2,12 +2,14 @@ window.onload= function(){
 
     document.getElementById('game-button').addEventListener('click', RandomQuote)
 
+
+    
     function RandomQuote(){
         // Create XHR Object
         var xhr = new XMLHttpRequest();
-        // OPEN - type, url/file, async
+        
         xhr.open('GET', 'https://hasbeenquoted.herokuapp.com/microapp', true);
-
+        
         console.log('READYSTATE: ', xhr.readyState);
 
         // OPTIONAL - used for loaders

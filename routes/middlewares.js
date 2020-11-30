@@ -1,6 +1,6 @@
-
-
 //Middlewares//   
+var cors = require('cors');
+
    
 //Middleware Object//   
 var middlewareObj = {};
@@ -12,7 +12,6 @@ middlewareObj.isLoggedIn = function (req, res, next){
         }
       res.redirect("/login");
     }
-
 
  //Pagination middleware(Special Thanks to Web Dev simplified)   
     middlewareObj.paginatedData = function(model){

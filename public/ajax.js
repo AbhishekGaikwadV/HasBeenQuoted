@@ -25,9 +25,10 @@
                          }
               
                var url =`https://hasbeenquoted.herokuapp.com/ajax?page=${page}&limit=5`; 
-               
+                
+             
                xhr.open('GET', url, true);
-              
+               
                console.log('READYSTATE: ', xhr.readyState);
                
                 // OPTIONAL - used for loaders
