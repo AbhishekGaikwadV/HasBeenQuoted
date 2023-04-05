@@ -73,7 +73,7 @@ app.use(function(req,res,next){
 
   
  //Server setup//   
- app.listen( process.env.PORT || 3000, () => {
+ app.listen( process.env.PORT, () => {
  console.log("The HasQuoted Server Has Started!");
 });
 
