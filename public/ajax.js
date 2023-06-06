@@ -1,4 +1,4 @@
-
+//Special thanks to Traversy Media 
 
  window.onload= function(){    
  
